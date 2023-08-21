@@ -11,7 +11,7 @@ function Reviews() {
 
   const fetchReviews = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/review/all-reviews');
+      const response = await axios.get(`${process.env.REACT_APP_BE_URL}/review/all-reviews`);
       if (response.status === 200) {
         setReviews(response.data);
       } else {
