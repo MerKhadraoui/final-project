@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 export const coinSchema = new mongoose.Schema({
 
-    cryptos: {
+  cryptos: {
     type: String,
     required: true,
   },
@@ -9,10 +9,10 @@ export const coinSchema = new mongoose.Schema({
     type: String,
     required: true
   },
- 
+
   price_change_24h: {
-    type: Number,   
-     required: true
+    type: Number,
+    required: true
 
   },
   price_change_percentage_24h: {
@@ -23,19 +23,19 @@ export const coinSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  owner:{
+  owner: {
     type: mongoose.Schema.Types.ObjectId,     //Referenced(Eu)
     ref: "user"
   },
-  quantity:{
-    type:Number,
-    default:0
+  quantity: {
+    type: Number,
+    default: 0
 
   },
-  image:{    type:String,
+  image: {
+    type: String,
   }
 });
 
-export default  mongoose.model('Coin', coinSchema);
-
+export default mongoose.model('Coin', coinSchema);
 

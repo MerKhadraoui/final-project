@@ -1,0 +1,16 @@
+.bodyAboutUs-info {
+  height: 200px;
+  overflow-y: scroll;
+  text-align: center;
+  z-index: 1;
+  border-bottom: #140f0489 4px solid;
+  padding-top: 10px;
+  position: relative;
+}
+
+@media screen and (min-width: 400px) and (max-width: 1024px) {
+  .container {
+    width: 90vw;
+    height: 30vh;
+  }
+  }

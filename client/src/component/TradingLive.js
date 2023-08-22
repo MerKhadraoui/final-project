@@ -6,7 +6,7 @@ import React, { useEffect, useRef } from 'react';
 
 let tvScriptLoadingPromise;
 
-export default function TradingViewWidget({userData} ) {
+export default function TradingViewWidget({ userData }) {
   const onLoadScriptRef = useRef();
 
   useEffect(
@@ -60,17 +60,16 @@ export default function TradingViewWidget({userData} ) {
     <div className='tradingview-widget-container'>
       <div id='tradingview_c1116' />
       <div className="tradingview-widget-copyright">
-       <span className="blue-text">Track all markets on TradingView</span>
+        <span className="blue-text">Track all markets on TradingView</span>
         <div className='cryptos-container'> </div>
-        <CryptosList userData={userData} /> 
+        <CryptosList userData={userData} />
       </div>
-        
+
 
 
     </div>
   );
 }
-
 
 
 

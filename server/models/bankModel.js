@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-const sum=Math.floor(Math.random() * 200000)
+const sum = Math.floor(Math.random() * 200000)
 const bankSchema = new mongoose.Schema({
 
   accountNumber: {
@@ -11,7 +11,7 @@ const bankSchema = new mongoose.Schema({
     type: String,
     required: true
   },
- 
+
   transferAmount: {
     type: Number,
     default: sum
@@ -25,13 +25,13 @@ const bankSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  owner:{
+  owner: {
     type: mongoose.Schema.Types.ObjectId,     //Referenced(Eu)
-    ref: "user"
+    ref: "user",
+    unique: true
   }
-  
+
 });
 
-export default  mongoose.model('Bank', bankSchema);
-
+export default mongoose.model('Bank', bankSchema);
 

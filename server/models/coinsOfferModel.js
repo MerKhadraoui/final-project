@@ -1,23 +1,23 @@
 import mongoose from "mongoose"
 export const coinOffer = new mongoose.Schema({
 
-    cryptos: {
+  cryptos: {
     type: String,
-    
+
   },
- new_price: {
+  new_price: {
     type: Number,
-    
+
   },
-  owner:{
+  owner: {
     type: mongoose.Schema.Types.ObjectId,     //Referenced(Eu)
     ref: "user"
   },
-  
-  image:{    type:String,
+
+  image: {
+    type: String,
   }
 });
 
-export default  mongoose.model('CoinOffer', coinOffer);
-
+export default mongoose.model('CoinOffer', coinOffer);
 

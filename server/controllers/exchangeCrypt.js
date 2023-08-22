@@ -96,21 +96,21 @@ export const addCoinOffer = async (req, res, next) => {
     const { cryptos, current_price, price_change_percentage_24h, quantity } =
       req.body;
 
-      const coinToOffer = new OfferCoin({
-        cryptos:cryptos,
-        new_price: +current_price+(current_price* price_change_percentage_24h),
-          quantity:quantity 
-        
-      })
-      await coinToOffer.save()
-          res.status(200).json({
+    const coinToOffer = new OfferCoin({
+      cryptos: cryptos,
+      new_price: +current_price + (current_price * price_change_percentage_24h),
+      quantity: quantity
+
+    })
+    await coinToOffer.save()
+    res.status(200).json({
       message: " Offer coin add successfully",
     });
   } catch (err) {
     next(err);
   }
 };
-export const getOfferCoins=async(req,res,next)=>{
+export const getOfferCoins = async (req, res, next) => {
   try {
     const offerCoinsList = await OfferCoin.find();
     res.status(200).json(offerCoinsList);
@@ -118,3 +118,13 @@ export const getOfferCoins=async(req,res,next)=>{
     next(err);
   }
 }
+export const deleteAllCoins = async (req, res, next) => {
+  try {
+    // Delete all documents from the collection
+    const result = await coinsModel.deleteMany({});
+    res.json({ message: 'All documents deleted' });
+  } catch (err) {
+    console.error('Error deleting documents:', err);
+    res.status(500).json({ error: 'An error occurred' });
+  }
+};

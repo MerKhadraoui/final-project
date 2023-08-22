@@ -1,0 +1,158 @@
+/*.phonApp {
+  text-align: center;
+  height: 20%;
+}
+.app-text {
+  color: goldenrod;
+}*/
+/*
+@media screen and (min-width: 400px) and (max-width: 1024px) {
+  .phonApp {
+    width: 90vw;
+    height: 40vh;
+  }
+  .app-img img {
+    height: 30vh;
+  }
+}*/
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  color: #f4f4f4;
+  /*background-color: #061121;*/
+}
+
+body {
+  font-family: "Acumin Pro";
+  font-style: normal;
+}
+
+:root {
+  --swiper-theme-color: #007aff;
+}
+
+:root {
+  --swiper-navigation-size: 44px;
+}
+
+@media screen and (min-width: 1128px) {
+  .css-804hdb {
+    padding-top: 184px;
+    padding-bottom: 128px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .css-804hdb {
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .css-1h25iwx {
+    padding-left: 56px;
+    padding-right: 56px;
+    display: block;
+  }
+
+  .css-kkvjab {
+    max-width: 1128px;
+  }
+
+  .css-1mtq4gv {
+    font-size: 25px;
+    line-height: 145%;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+  }
+
+  .css-clbdrz {
+    font-size: 48px;
+    line-height: 125%;
+    letter-spacing: -0.65px;
+    font-weight: 600;
+    width: 562px;
+  }
+}
+
+.css-804hdb {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #061121;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.css-z9g80j {
+  box-sizing: border-box;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  filter: brightness(50%);
+  object-fit: cover;
+}
+
+video {
+  /* overflow-clip-margin: content-box 0px;*/
+  overflow: clip;
+}
+
+.css-1h25iwx {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  max-width: 1128px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.css-kkvjab {
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+}
+
+.css-1mtq4gv {
+  box-sizing: border-box;
+  margin: 0;
+  color: #1199fa;
+  white-space: pre-wrap;
+  font-family: Acumin Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+}
+
+.css-clbdrz {
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 56px;
+  color: #f4f4f4;
+  width: 327px;
+  white-space: pre-wrap;
+  font-family: Acumin Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+}
+
+.css-t8u6ip {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+}

@@ -4,13 +4,13 @@ function PhonApp() {
   return (
     <div className='phonApp'>
 
-    <div className='app-text'>
-      <h3>Here you can get our APP</h3>
-    </div>
-     <div className='app-img'>
-      <img  src='./cryptos-app.png' alt='cryptos'/>
-    </div>
-  
+      <div className='app-text'>
+        <h3>Here you can get our APP</h3>
+      </div>
+      <div className='app-img'>
+        <img src='./cryptos-app.png' alt='cryptos' />
+      </div>
+
     </div>
   )
 }
@@ -18,4 +18,3 @@ function PhonApp() {
 
 
 export default PhonApp
-

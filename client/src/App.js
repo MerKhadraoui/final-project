@@ -1,5 +1,5 @@
 
-import React, {useState,useEffect,useContext} from "react"
+import React, { useState, useEffect, useContext } from "react"
 import Registration from './component/Registration';
 import Footer from './component/Footer';
 import Header from './component/Header';
@@ -19,83 +19,139 @@ import StorContext from "./context/index.js";
 import MyWallet from "./component/MyWallet";
 import NotFound from "./component/NotFound";
 import CoinsBS from "./component/CoinsBS";
+import axios from "axios";
+import CoinsToSell from "./component/CoinsToSell";
 
 
 function App() {
- useContext(StorContext)
- const [wallet,setWallet]=useState([{}])
- const [bankData, setBankData] = useState({});
-   const newsData=myStore((state)=>state.newsData)
-   const [avatar, setAvatar] = useState("")
-   const[counter,setCounter]=useState(0)
-   const [selectedCrypt,setSelectedCrypt]=useState([{
-  //   image:"",
-  //   id:"",
-	// 	current_price:0,
-	// price_change_24h:0,
-	// 	price_change_percentage_24h:0,
-	// 	total_volume:0
-}])
-const [profileData, setProfileData] = useState({
-  firstName: "",
-  lastName: "",
-  email: "",
-  phone:"",
-  aboutMe:"",
-  avatar:"",
+  useContext(StorContext)
+  const [wallet, setWallet] = useState([{}])
+  const [checkUserId, setCheckUserId] = useState(false);
+  const [coinsToSell, setCoinsToSell] = useState([{}])
+  const [value, setValue] = useState([0])
+  const [reviewText, setReviewText] = useState("");
 
-});
+  const [countSell, setCountSell] = useState(0)
+  const [bankData, setBankData] = useState({});
+  const newsData = myStore((state) => state.newsData)
+  const [avatar, setAvatar] = useState("")
+  const [counter, setCounter] = useState(1)
+  const [walletList, setWalletList] = useState([{}]);
 
-const getData=myStore((state)=>state.getData )
+  const [userId, setUserId] = useState("")
+  const [userName, setUserName] = useState("")
+  const [selectedCrypt, setSelectedCrypt] = useState([{
+    //   image:"",
+    //   id:"",
+    // 	current_price:0,
+    // price_change_24h:0,
+    // 	price_change_percentage_24h:0,
+    // 	total_volume:0
+  }])
+  const [profileData, setProfileData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    aboutMe: "",
+    avatar: "",
+
+  });
+
+  const getData = myStore((state) => state.getData)
   const [authenticated, setAuthenticated] = useState(false);
   const [userData, setUserData] = useState({
-    userName:"",
-    lastName:"",
-    userEmail:"",
-    userID:"",
-    avatar:"",
-   aboutMe:""
-  
-   })
-   console.log(localStorage);
+    userName: "",
+    lastName: "",
+    userEmail: "",
+    userID: "",
+    avatar: "",
+    aboutMe: ""
 
-const logoutHandler = () => {
-  console.log("test the logout");
-  setAuthenticated(false);
-  setAvatar(false)
-  localStorage.removeItem("my-app-token");
-  console.log(localStorage);
-};
-  useEffect(()=>{
-   getData()
- },[]);
-   return (
+  })
+
+  const logoutHandler = () => {
+    localStorage.removeItem("my-app-token");
+    setAuthenticated(false);
+  };
+  useEffect(() => {
+    getData()
+  }, []);
+
+
+
+  useEffect(() => {
+    const token = JSON.parse(localStorage.getItem("my-app-token"));
+
+    if (token !== null) {
+      axios
+        .get(`${process.env.REACT_APP_BE_URL}/users/authorize-user`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then((response) => {
+          setUserName(response.data.userName);
+          setAuthenticated(true);
+          setUserId(response.data.userId);
+          setAvatar(response.data.avatar)
+
+        })
+        .catch((err) => {
+          if (err.response.status === 401)
+            localStorage.removeItem("my-app-token");
+          console.log(err.message)
+        });
+    }
+  }, []);
+  console.log(userId);
+
+  return (
     <div className="bg-animation" >
-    <StorContext.Provider value={{counter,setCounter,profileData, setProfileData,wallet,setWallet,bankData, setBankData, selectedCrypt,setSelectedCrypt,logoutHandler, avatar, setUserData,newsData,userData,setAuthenticated, authenticated}}>
+      <StorContext.Provider value={{
+        reviewText, setReviewText, counter, userId, avatar, setAvatar, countSell, setCountSell, setCounter, profileData, setProfileData, wallet, setWallet, bankData, walletList, setWalletList, setBankData, selectedCrypt, setSelectedCrypt, logoutHandler, checkUserId, setCheckUserId, setUserData, newsData, userData, setAuthenticated, authenticated, coinsToSell, value, setValue,
+        setCoinsToSell,
+      }}>
 
-     <Header/>
-     <Routes>
-  
-        <Route path="/register" element={<Registration/>} />
-        <Route path="/trading-live" element={<TradingLive />} />
-        <Route path="/about-us" element={<AboutUs/>} />
-         <Route path="/profile" element={<Profile />} />
-        <Route path="/bank-data" element={<BankData/>} />
-        {/* <Route path="/bank-data" element={<SecuredRoutes></SecuredRoutes>} /> */}
+        <Header />
+        <Routes>
 
-        <Route path="/login" element={<Login/>}/>
+          <Route path="/register" element={<Registration />} />
+          <Route path="/trading-live" element={<TradingLive />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          {authenticated ? <Route path="/profile" element={<Profile />} /> :
+            <Route path="*" element={<NotFound />} />
 
-        <Route path="/" element={<Home  ></Home>} />
-        <Route path="*" element={<NotFound />} />
+          }
+          <Route path="/bank-data" element={<BankData />} />
+          {/* <Route path="/bank-data" element={<SecuredRoutes></SecuredRoutes>} /> */}
 
-        <Route path="/add-bank" element={<CreateAccount />} />
-        <Route path="/get-bank" element={<DisplayUserBalance />} />
-        <Route path="/my-wallet" element={<MyWallet />} />
-        <Route  path="/coins" element={<CoinsBS/>}/>
-      </Routes>
-    
-     <Footer/>
-     </StorContext.Provider></div>
+          {<Route path="/login" element={<Login />} />}
+
+          <Route path="/" element={<Home  ></Home>} />
+          <Route path="*" element={<NotFound />} />
+
+          {authenticated ? <Route path="/add-bank" element={<CreateAccount />} /> :
+            <Route path="*" element={<NotFound />} />
+
+          }
+          {authenticated ? <Route path="/get-bank" element={<DisplayUserBalance />} /> :
+            <Route path="*" element={<NotFound />} />
+          }
+          {authenticated ? <Route path="/sell-coins" element={<CoinsToSell />} /> :
+            <Route path="*" element={<NotFound />} />
+
+
+          }
+          {authenticated ? <Route path="/my-wallet" element={<MyWallet />} /> :
+            <Route path="*" element={<NotFound />} />
+
+          }
+          <Route path="/coins" element={<CoinsBS />} />
+        </Routes>
+
+        <Footer />
+      </StorContext.Provider></div>
   );
 }
 

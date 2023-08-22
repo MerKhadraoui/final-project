@@ -1,35 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Abel|Courgette|Cormorant+Garamond");
+.wallet-container {
+  display: flex;
+  width: 100vw;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Abel|Courgette|Cormorant+Garamond');
-
-.wallet{
+.sidebar {
+  width: 15vw;
+}
+.wallet {
   display: flex;
   color: antiquewhite;
   flex-direction: column;
-align-content:space-around;
-justify-content: center;
- width: 100vw;
+  align-content: space-around;
+  justify-content: center;
+  width: 80vw;
   height: 100vh;
 }
-.wallet-item{
+.wallet-item {
   font-size: larger;
 
   color: white;
-  border: 2px rgb(152, 148, 148) solid; 
+  border: 2px rgb(152, 148, 148) solid;
 }
-.wallet-item td{
+.wallet-item td {
   padding: 2rem;
   width: 20%;
 }
 
-
-.total-cart{
+.total-cart {
+  display: flex;
+  align-items: center;
+  align-content: center;
   color: white;
-  padding: 5%;
   border: 2px rgb(152, 148, 148) solid;
-  height: 4rem;
+  height: 8rem;
   font-size: 2rem;
 }
-.some{
-   position: absolute;
-right: 10rem;
+.total-cart span {
+  padding: 5%;
+}
+.some {
+  position: absolute;
+  right: 10rem;
 }

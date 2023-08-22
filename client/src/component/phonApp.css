@@ -1,22 +1,17 @@
-.phonApp{
-    text-align: center;
-height: 20%;
-   
+.phonApp {
+  text-align: center;
+  height: 20%;
 }
-.app-text{
-    color: goldenrod;
+.app-text {
+  color: goldenrod;
 }
-
 
 @media screen and (min-width: 400px) and (max-width: 1024px) {
-    .phonApp{
-        width: 90vw;
-        height: 40vh;
-    }
-   .app-img img{
+  .phonApp {
+    width: 90vw;
+    height: 40vh;
+  }
+  .app-img img {
     height: 30vh;
-    
-   }
-   
-    
+  }
 }
