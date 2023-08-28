@@ -1,16 +1,90 @@
 .bodyAboutUs-info {
-  height: 200px;
+  height: 270px;
   overflow-y: scroll;
   text-align: center;
   z-index: 1;
-  border-bottom: #140f0489 4px solid;
-  padding-top: 10px;
+  padding-top: 20px;
   position: relative;
 }
-
+/*
 @media screen and (min-width: 400px) and (max-width: 1024px) {
   .container {
     width: 90vw;
     height: 30vh;
   }
+}
+*/
+@media screen and (min-width: 1128px) {
+  .css-17n7ew6 {
+    letter-spacing: 0.015em;
   }
+  .css-27iy77 {
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .css-17n7ew6 {
+    letter-spacing: 0.015em;
+  }
+  .css-27iy77 {
+    font-size: 16px;
+    line-height: 135%;
+    font-weight: 600;
+    max-width: max-content;
+  }
+}
+
+.css-17n7ew6 {
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: Acumin Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  font-size: 18px;
+  line-height: 110%;
+  font-weight: 600;
+  white-space: nowrap;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 54px;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.2s;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 40px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-color: #f4f4f4;
+  background-color: transparent;
+  color: #f4f4f4;
+  margin-top: 10px;
+}
+
+.css-27iy77 {
+  box-sizing: border-box;
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: Acumin Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+}
+.css-ve18x2 {
+  box-sizing: border-box;
+  margin: 0;
+  margin-left: 16px;
+  display: inline-flex;
+}
+
+/* #DAA520
+*/

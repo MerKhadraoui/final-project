@@ -8,6 +8,7 @@ function Reviews() {
     const { reviewText } = useContext(StorContext)
     const [reviews, setReviews] = useState([]);
 
+
     useEffect(() => {
         fetchReviews();
     }, [reviewText]);
@@ -29,8 +30,8 @@ function Reviews() {
         setReviews((prevReviews) =>
             prevReviews.map((review) => {
                 if (review._id === reviewId) {
-                    const newLikes = review.likes || 0; // Initialize likes to 0 if undefined
-                    const newDislikes = review.dislikes || 0; // Initialize dislikes to 0 if undefined
+                    const newLikes = review.likes || 0;
+                    const newDislikes = review.dislikes || 0;
 
                     if (action === 'like') {
                         return { ...review, likes: newLikes + 1 };
@@ -49,17 +50,22 @@ function Reviews() {
         <>
             <h2 className='review-heading'>Reviews</h2>
             <div className="reviews">
-
                 {reversedReviews.length === 0 ? (
                     <p>No reviews available.</p>
                 ) : (
                     <ul>
                         {reversedReviews.map((review) => (
                             <li key={review._id}>
-
                                 <div className="review-content">
-                                    <p className="review-text">{review.reviewText} </p>
+                                    <div className="review-info">
+
+                                        <p className="review-name">{review.firstName}</p>
+                                        <p className="review-text">{review.reviewText} </p>
+                                        <p className="createdAt">{review.date}</p>
+                                    </div>
+
                                 </div>
+
                                 <div className="review-actions">
                                     <button className="like" onClick={() => handleLikeDislike(review._id, 'like')}>
                                         <i className="fas fa-thumbs-up"></i>
@@ -70,7 +76,6 @@ function Reviews() {
                                         <span className="dislike-count">{review.dislikes}</span>
                                     </button>
                                 </div>
-
                             </li>
                         ))}
                     </ul>
@@ -79,4 +84,5 @@ function Reviews() {
         </>
     );
 }
-export default Reviews
+
+export default Reviews;
