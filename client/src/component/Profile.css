@@ -4,26 +4,27 @@
 }
 
 .main {
-  display: flex;
+display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 75vh;
 }
 .sidebar {
-  margin-left: 0.5%;
-  margin-bottom: 0.5%;
-  margin-top: 0.5%;
-  height: 100vh;
-  border-radius: 10px;
-  background-color: #9f7d1e65;
-}
+  margin-left:0.5%;
+ margin-bottom: 0.5%;
+ margin-top: 0.5%;
+ /* height: 75vh; */
+ border-radius: 10px;
+ background-color: #9f7d1e65;
+ }
 
-.link-list {
+ .link-list {
   margin-top: 10rem;
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
   width: 15vw;
   text-decoration: none;
+  
 }
 .link-name {
   color: rgb(219, 180, 7);
@@ -33,21 +34,22 @@
   margin-right: 20px;
   cursor: pointer;
   height: 100%;
+  
 }
 
 /* Card*/
 
 .card-content {
-  width: 70vw;
+ width: 70vw;
   margin-top: 2rem;
   background-color: #3a3b3b96;
 
-  height: 50vw;
+  /* height: 50vw; */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
 }
-/* card headind */
+/* card headind */ 
 
 .card-heading {
   display: flex;
@@ -56,15 +58,16 @@
   height: 6.5rem;
   background-color: #3a3b3b96;
   border-radius: 10px;
+
 }
 
-.link-name {
+ .link-name {
   text-decoration: none;
   color: bisque;
   margin: 2rem;
   font-size: 2rem;
 }
-.link-name:hover {
+.link-name:hover{
   color: rgb(238, 165, 8);
   margin: 2rem;
   font-size: 2rem;
@@ -80,6 +83,7 @@
     align-items: center;
   }
 
+
   .card-content {
     width: 90vw;
   }
@@ -87,19 +91,24 @@
 
 /* For iPhon 12Pro width up to 393px */
 @media (max-width: 393px) {
-  .card-heading-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   .card-heading-links {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
+ 
   }
 
-  .link-name {
+   .link-name {
     margin: 0.5rem;
     font-size: 1.5rem;
+
   }
 
   .fa-times-circle {
     margin-top: 0.6rem;
     font-size: 2.5rem;
   }
+
+ 
 }

@@ -14,7 +14,7 @@ function AboutUs() {
     <div className='home'>
       <div><HeadAboutUs /></div>
       <div>
-        <nav style={{ color: "goldenrod" }}> <h2> About "SEMM-DV-Cryptos_Space"</h2></nav>
+        <nav style={{ color: "goldenrod" }}> <h2> About "Cryptos-Space" Team</h2></nav>
         <Carousel className='carousel'>
           {newsData.map((data, i) => < Carousel.Item key={i} className='card-item  news-text'>
             <a href={`${data.url}`} > <img

@@ -1,162 +1,175 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: all 0.4s;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
-.color {
-  color: green;
-  background-color: red;
-  width: 10px;
-  height: 10px;
+.color{
+    color: green;
+    background-color:red;
+    width: 10px;
+    height: 10px;
 }
-.container {
-  height: 50%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.profile-pic {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-.logo img {
-  position: absolute;
-  left: 0.5rem;
-  top: 0.5rem;
-  width: 3.5rem;
-  height: 3.5rem;
+.container{
+
+    height:50%;
+    margin-left: 5%;
+    margin-right: 5%; 
+ }
+ .profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+ }
+.logo img{
+
+    position:absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
 }
 /* Navbar section */
 
-.nav {
-  width: 100vw;
-  padding-top: 1rem;
-  height: 10vh;
-  position: relative;
-  /* line-height: 65px; */
-  text-align: center;
-  background-color: rgba(13, 13, 14, 0.8);
+.nav{
+    width: 100vw;
+    padding-top: 1rem;
+    height: 10vh;
+    position: relative;
+    /* line-height: 65px; */
+    text-align: center;
+    background-color: rgba(13, 13, 14, 0.8);
 }
 
-.nav div.logo {
-  width: 180px;
-  height: 10px;
-  position: absolute;
+
+
+.nav div.logo{
+    width: 180px;
+    height: 10px;
+    position: absolute;
 }
 
-.nav div.logo a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.8em;
-  text-transform: uppercase;
+.nav div.logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8em;
+    text-transform: uppercase;
 }
 
 .nav div.logo a:hover {
-  color: #c0c0c0;
+    color: #c0c0c0;
 }
 
-.nav div.main_list {
-  width: 80%;
-  height: 65px;
-  float: right;
+.nav div.main_list{
+    width: 80%;
+    height: 65px;
+    float: right;
 }
 
-.nav div.main_list ul {
-  width: 100%;
-  height: 65px;
-  display: flex;
-  list-style: none;
+.nav div.main_list ul{
+    width:100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
 }
 
-.nav div.main_list ul li {
-  width: 300px;
-  height: 65px;
+.nav div.main_list ul li{
+    width: 300px;
+    height: 65px;
+
 }
-.link {
-  padding: 10px;
+.link{
+    padding: 10px;
 }
-.nav div.main_list ul li a {
-  text-decoration: none;
-  color: #fff;
-  line-height: 65px;
-  text-transform: uppercase;
+.nav div.main_list ul li a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    text-transform: uppercase;
 }
 
-.nav div.main_list ul li a:hover {
-  color: #c0c0c0;
+.nav div.main_list ul li a:hover{
+    color: #c0c0c0;
 }
 
 .nav div.media_button {
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  position: absolute;
-  right: 15px;
-  top: 12px;
-  display: none;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    display: none;
 }
 
 .nav div.media_button button.main_media_button {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  outline: 0;
-  border: none;
-  cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;;
+    outline: 0;
+    border: none;
+    cursor: pointer;
 }
 
-.nav div.media_button button.main_media_button span {
-  width: 98%;
-  height: 1px;
-  display: block;
-  background-color: #fff;
-  margin-top: 9px;
-  margin-bottom: 10px;
+.nav div.media_button button.main_media_button span{
+    width: 98%;
+    height: 1px;
+    display: block;
+    background-color: #fff;
+    margin-top: 9px;
+    margin-bottom: 10px;
 }
 
-.nav div.media_button button.main_media_button:hover span:nth-of-type(1) {
-  transform: rotateY(180deg);
-  transition: all 0.5s;
-  background-color: #c0c0c0;
+.nav div.media_button button.main_media_button:hover span:nth-of-type(1){
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+    background-color: #c0c0c0;
 }
 
-.nav div.media_button button.main_media_button:hover span:nth-of-type(2) {
-  transform: rotateY(180deg);
-  transition: all 0.4s;
-  background-color: #c0c0c0;
+.nav div.media_button button.main_media_button:hover span:nth-of-type(2){
+    transform: rotateY(180deg);
+    transition: all 0.4s;
+    background-color: #c0c0c0;
 }
 
-.nav div.media_button button.main_media_button:hover span:nth-of-type(3) {
-  transform: rotateY(180deg);
-  transition: all 0.3s;
-  background-color: #c0c0c0;
+.nav div.media_button button.main_media_button:hover span:nth-of-type(3){
+    transform: rotateY(180deg);
+    transition: all 0.3s;
+    background-color: #c0c0c0;
 }
 
 .nav div.media_button button.active span:nth-of-type(1) {
-  transform: rotate3d(0, 0, 1, 45deg);
-  position: absolute;
-  margin: 0;
+    transform: rotate3d(0, 0, 1, 45deg);
+    position: absolute;
+    margin: 0;
 }
 
 .nav div.media_button button.active span:nth-of-type(2) {
-  display: none;
+    display: none;
 }
 
 .nav div.media_button button.active span:nth-of-type(3) {
-  transform: rotate3d(0, 0, 1, -45deg);
-  position: absolute;
-  margin: 0;
+    transform: rotate3d(0, 0, 1, -45deg);
+    position: absolute;
+    margin: 0;
 }
 
 .nav div.media_button button.active:hover span:nth-of-type(1) {
-  transform: rotate3d(0, 0, 1, 20deg);
+    transform: rotate3d(0, 0, 1, 20deg);
 }
 
 .nav div.media_button button.active:hover span:nth-of-type(3) {
-  transform: rotate3d(0, 0, 1, -20deg);
+    transform: rotate3d(0, 0, 1, -20deg);
 }
 
 /* Home section */
@@ -164,66 +177,73 @@
 /* Medai qurey section */
 
 @media screen and (min-width: 400px) and (max-width: 1024px) {
-  .container {
-    margin: 0;
-  }
+    
+    .container{
+        margin: 0;
+    }
+    
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    margin: 0;
-    width: 100vw;
-  }
 
-  .nav div.logo {
-    position: fixed;
-    left: 0;
-  }
 
-  .nav div.main_list {
-    width: 100vw;
-    height: 2rem;
-    margin-top: 65px;
-    height: 0px;
-    overflow: inherit;
-    font-size: small;
-  }
 
-  .nav .container .show_list {
-    height: 200px;
-    width: 100vw;
-    position: fixed;
-    left: 0;
-  }
-
-  .nav .container.main_list ul {
-    /* display: flex;
+@media screen and (max-width:768px) {
+    
+    .container{
+        margin: 0;
+        width: 100vw;
+    }
+    
+    .nav div.logo{
+        position: fixed;
+        left: 0;    }
+  
+    .nav div.main_list{
+        width: 100vw;
+        height: 2rem;
+        margin-top: 65px;
+        height: 0px;
+        overflow:inherit;
+        font-size: small;
+    }
+    
+    .nav .container .show_list{
+        height: 200px;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+    }
+    
+    .nav .container.main_list ul{
+        /* display: flex;
         flex-direction: column; */
-    /* width: 100vw;
+        /* width: 100vw;
         height: 200px;
         top: 80px;
         right: 0;
         left: 0; */
-  }
 
-  .nav div.main_list ul li {
-    width: 80vw;
-    /* position:relative;
+    }
+    
+    .nav div.main_list ul li{
+        width: 80vw;
+        /* position:relative;
         height: 90%; */
-    margin-top: 8px;
-    background-color: rgba(40, 40, 40, 0.192);
-  }
-
-  .nav div.main_list ul li a {
-    text-align: center;
-    line-height: 40px;
-    /* width: 30vw; */
-    height: 40px;
-    display: table;
-    color: rgb(198, 177, 124);
-  }
-
-  .nav div.media_button {
-    display: block;
-  }
+      
+margin-top:8px;
+        background-color:rgba(40, 40, 40, 0.192);
+    }
+    
+    .nav div.main_list ul li a{
+      text-align: center;
+        line-height: 10px;
+        /* width: 30vw; */
+      
+        display: table;
+        color: rgb(158, 177, 124);
+    }
+    
+    .nav div.media_button{
+        display: block;
+    }
 }

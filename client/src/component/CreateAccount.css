@@ -15,7 +15,7 @@ h2 {
 .bank-form form {
   display: flex;
   flex-direction: column;
-  margin-left: 10rem;
+  margin-left:10rem;
   margin-right: 10rem;
   margin: 20px;
 }

@@ -1,153 +1,170 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
-.home {
-  /* width: 100vw; */
-  height: 100%;
-  /* background: #0b5955 linear-gradient(45deg, #000000, #101618 57%,) repeat scroll 0 0; */
+.home{
+    /* width: 100vw; */
+    height: 100%;
+    /* background: #0b5955 linear-gradient(45deg, #000000, #101618 57%,) repeat scroll 0 0; */
 }
 
-.news-text {
-  background-color: black;
-  box-shadow: 10px 5px 5px #171716;
-  height: 30vh;
-}
+  .news-text{
+                background-color: black;
+                box-shadow:10px 5px 5px  #171716;
+                height: 30vh;
 
-.image {
-  height: 100%;
-  border-radius: 5%;
+  }
+ 
+.image{
+    height: 100%;
+    border-radius: 5%;
+}  
+.link{
+    text-decoration: none;
+color:white;
+font-size: large;
+
 }
-.link {
-  text-decoration: none;
-  color: white;
-  font-size: large;
-}
-.news-box {
-  color: white;
-  font-size: large;
-  padding-left: 25rem;
+.news-box{
+    color: white;  
+font-size: large;
+    padding-left: 25rem;
+
 }
 
 .large-cta-section {
-  box-shadow: 0 6px 12px -4px #daa520 inset;
-  text-align: center;
-  z-index: 1;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
+    box-shadow: 0 6px 12px -4px #DAA520 inset;
+    text-align: center;
+    z-index: 1;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
 }
-.medium-large-wrapper {
-  padding-top: 50px;
+.medium-large-wrapper{
+    padding-top: 50px;
 }
 .h2.large {
-  display: inline-block;
-  font-size: 5em;
-  font-family: "Roboto", sans-serif;
+    display: inline-block;
+    font-size: 5em;
+    font-family: "Roboto",sans-serif;
 }
 .white {
-  color: #fff;
+    color: #fff;
 }
 .h2 > .yellow {
-  color: #f5ee33;
-  font-weight: 600;
+    color: #f5ee33;
+    font-weight: 600;
 }
 .h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.4em;
-  font-weight: 300;
-  line-height: 1.8rem;
-  margin-top: 10px;
+    font-family: "Roboto",sans-serif;
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 1.8rem;
+    margin-top: 10px;
 }
 
 .footer-cta-link::after {
-  background-image: url("https://neverbounce.com/images/background-images/yellow-airplane-left.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  bottom: -10em;
-  content: "";
-  display: block;
-  height: 10em;
-  left: -8.5em;
-  pointer-events: none;
-  position: relative;
-  width: 7em;
+    background-image: url("https://neverbounce.com/images/background-images/yellow-airplane-left.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -10em;
+    content: "";
+    display: block;
+    height: 10em;
+    left: -8.5em;
+    pointer-events: none;
+    position: relative;
+    width: 7em;
 }
 
 .cta-link {
-  background: #fff none repeat scroll 0 0;
-  border-radius: 4px;
-  letter-spacing: 2px;
-  line-height: 1rem;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 4em;
-  padding: 0.88rem 1.5em;
-  text-decoration: none;
-  text-transform: uppercase;
-  /* transition: background 0.2s ease-in-out 0s; */
-  vertical-align: middle;
+    background: #fff none repeat scroll 0 0;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    line-height: 1rem;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 4em;
+    padding: 0.88rem 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* transition: background 0.2s ease-in-out 0s; */
+    vertical-align: middle;
 }
-a.cta-link:hover {
-  background: #f5ee33;
-  text-decoration: none;
+a.cta-link:hover{
+    background: #f5ee33;
+    text-decoration: none;
 }
+
+
 
 .cta-teal-airplane {
-  opacity: 0.8;
-
-  width: 9rem;
-  height: 8rem;
-  border-radius: 100%;
-  pointer-events: none;
-  position: absolute;
-  right: 60px;
-  top: 11em;
-  z-index: 4;
+    opacity: 0.8;
+  
+    width: 9rem;
+    height: 8rem;
+    border-radius: 100%;
+    pointer-events: none;
+    position: absolute;
+    right: 60px;
+    top: 11em;
+    z-index: 4;
 }
 
-.review-form {
-  width: 100%;
-  margin: 0;
+.review-form{
+width: 100%;
+margin-top: 2rem;
+display: flex;
+flex-direction: column;
+padding-left: 1rem;
+padding-right: 2.4rem;
 }
 
 .review-read-write {
-  margin-left: 20vw;
-  margin-right: 20vw;
+  
+   margin-left: 20vw;
+   margin-right: 20vw;
 }
 .review-read {
-  border-bottom: 1px solid #d2d1cc;
+border-bottom: 1px solid  #d2d1cc; 
 }
 .review-label {
-  margin-top: 1rem;
-  padding: 10px;
-  color: goldenrod;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.4rem;
+    margin-top: 1rem;
+    padding: 10px;
+    color: goldenrod;
+   text-align: center;
+   font-family: "Roboto",sans-serif;
+    font-size: 1.4rem;
+   
 }
 .review-area {
-  background-color: #fff;
-  border-radius: 5px;
+     background-color:  #fff; 
+     border-radius: 5px;
 }
 .review-btn {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   
+    background-color: goldenrod;
+    color: black;
+    font-size: 1.4rem;
+    font-family: "Roboto",sans-serif;
+    border-radius: 5px;
 
-  background-color: goldenrod;
-  color: black;
-  font-size: 1.4rem;
-  font-family: "Roboto", sans-serif;
-  border-radius: 5px;
 }
-.review-btn:hover {
-  background-color: #a77a08;
+.review-btn:hover{
+    background-color: #a77a08;
 }
 @media screen and (min-width: 400px) and (max-width: 1024px) {
-  .d-block {
-    width: 100vw;
-    height: 30vh;
-  }
-  .card-item {
-    width: 50vw;
-    height: 30vh;
-    padding: 1rem;
-  }
+    .d-block{
+
+        width: 100vw;
+        height: 30vh;
+    }
+    .card-item{
+        width: 50vw;
+        height: 30vh;
+        padding: 1rem;
+    }
+   
+    
 }
+
+
