@@ -7,32 +7,33 @@ body {
   
   .showcase::after {
     content: '';
-    height: 80vh;
+    height: 87vh;
     width: 100%;
-    background-image: url(https://image.ibb.co/gzOBup/showcase.jpg);
+    background-image:
+    url(https://image.ibb.co/gzOBup/showcase.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: block;
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
+    filter: blur(15px);
+    -webkit-filter: blur(15px);
     transition: all 1000ms;
-  }
+}
   
   .showcase:hover::after {
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-  }
-  
-  .showcase:hover .content {
     filter: blur(2px);
     -webkit-filter: blur(2px);
-  }
+}
+  
+  .showcase:hover .content {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
   
   .content {
     position: absolute;
     z-index: 02;
-    top: 10%;
+    top: 2%;
     left: 40%;
     margin-top: 105px;
     margin-left: -145px;
@@ -60,7 +61,7 @@ height: 100%;
     margin-top: 1rem;
     font-size: 1.5rem;
     color: #f4f4f4;
-
+font-weight: 900 ;
   
 
   }
@@ -102,7 +103,7 @@ height: 100%;
   
 .our-team {
   padding: 30px 0 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background-color: #f7f5ec;
   text-align: center;
   overflow: hidden;

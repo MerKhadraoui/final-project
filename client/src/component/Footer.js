@@ -35,7 +35,7 @@ export default function App() {
           </li>
           <li>
             {" "}
-            <NavLink to="/services" className="list-inline-item">
+            <NavLink to="/trading-live" className="list-inline-item">
               Services
             </NavLink>
           </li>
@@ -45,21 +45,23 @@ export default function App() {
               About Us
             </NavLink>
           </li>
+          {/* 
           <li>
             {" "}
-            <NavLink to="/Terms" className="list-inline-item">
+            <NavLink to="/" className="list-inline-item">
               Terms
             </NavLink>
           </li>
           <li>
             {" "}
-            <NavLink to="/Privacy-Policy" className="list-inline-item">
+            <NavLink to="/" className="list-inline-item">
               Privacy Policy
             </NavLink>
           </li>
+          */}
         </ul>
       </div>
-     <div> <p className="copyright">Company Name © {new Date().getFullYear()}</p></div>
+     <div> <p className="copyright">Crypto-Spaces © {new Date().getFullYear()}</p></div>
       <div className="footer-img"> <img src="./footer.jpg" alt="footer"/></div>
     </footer>
     // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
