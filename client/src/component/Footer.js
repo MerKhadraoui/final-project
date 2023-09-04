@@ -13,16 +13,16 @@ export default function App() {
   return (
     <footer className=" footer-basic">
       <div className="social">
-        <a href="#">
+        <a target="_blank" href="https://www.instagram.com/">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href="#">
+        <a target="_blank" href="https://www.snapchat.com/">
           <FontAwesomeIcon icon={faSnapchat} />
         </a>
-        <a href="#">
+        <a target="_blank" href="https://twitter.com/?lang=en">
           <FontAwesomeIcon icon={faTwitter} />
         </a>
-        <a href="#">
+        <a target="_blank" href="https://www.facebook.com/">
           <FontAwesomeIcon icon={faFacebook} />
         </a>
       </div>
@@ -45,24 +45,12 @@ export default function App() {
               About Us
             </NavLink>
           </li>
-          {/* 
-          <li>
-            {" "}
-            <NavLink to="/" className="list-inline-item">
-              Terms
-            </NavLink>
-          </li>
-          <li>
-            {" "}
-            <NavLink to="/" className="list-inline-item">
-              Privacy Policy
-            </NavLink>
-          </li>
-          */}
+
+
         </ul>
       </div>
-     <div> <p className="copyright">Crypto-Spaces © {new Date().getFullYear()}</p></div>
-      <div className="footer-img"> <img src="./footer.jpg" alt="footer"/></div>
+      <div> <p className="copyright">Cryptos-Space © {new Date().getFullYear()}</p></div>
+      <div className="footer-img"> <img src="./footer.jpg" alt="footer" /></div>
     </footer>
     // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     // <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>

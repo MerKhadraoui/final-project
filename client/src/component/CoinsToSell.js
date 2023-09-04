@@ -6,93 +6,90 @@ import StorContext from '../context'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 function CoinsToSell() {
-  const {countSell,setCountSell,
-    value,setValue,
+  const { countSell, setCountSell,
+    value, setValue,
     coinsToSell,
-    setCoinsToSell}= useContext(StorContext)
-const noSoldCoin=[]
-setCountSell(0)
-    const goToSell=(e,data)=>{
-      console.log(e.target.name);
-     
-      // const newCoinsToSell=coinsToSell.filter((item)=>item.id!==data.id)
-    const selctedCoin=coinsToSell.find((elem)=>{
-if(elem._id===e.target.name){
-  const newVal=elem.current_price+(elem.current_price* elem.price_change_percentage_24h)
-  setValue([...value,parsePath(newVal)])
-}else{
-noSoldCoin.push(elem)
-}
-    })
-setCoinsToSell(noSoldCoin)
+    setCoinsToSell } = useContext(StorContext)
+  const noSoldCoin = []
+  setCountSell(0)
+  const goToSell = (e, data) => {
+    console.log(e.target.name);
 
-   console.log(noSoldCoin);
-    }
-   
+    // const newCoinsToSell=coinsToSell.filter((item)=>item.id!==data.id)
+    const selctedCoin = coinsToSell.find((elem) => {
+      if (elem._id === e.target.name) {
+        const newVal = elem.current_price + (elem.current_price * elem.price_change_percentage_24h)
+        setValue([...value, parsePath(newVal)])
+      } else {
+        noSoldCoin.push(elem)
+      }
+    })
+    setCoinsToSell(noSoldCoin)
+
+    console.log(noSoldCoin);
+  }
+  console.log(coinsToSell);
   return (
     <div className='coins-sell'>
-        <div className="sidebar">
+      <div className="sidebar">
         <div className="link-list">
           <NavLink to="/bank-data" className="link-name">
             Your Bank
-            {value.length>1?<FontAwesomeIcon icon={faBell} style={{color: "#e81111", width:40}} />:""}
+            {value.length > 1 ? <FontAwesomeIcon icon={faBell} style={{ color: "#e81111", width: 40 }} /> : ""}
 
           </NavLink>
           <NavLink to="/sell-coins" className="link-name">
-           Coins to sell
+            Coins to sell
             {/* {counter>1?<><FontAwesomeIcon icon={faBell} style={{color: "#e81111", width:40}} /><small style={{color:"red"}}>{counter}</small></> :null} */}
           </NavLink>
           <NavLink to="/coins" className="link-name">
-          your wallet coins 
-          {/* {!update?<FontAwesomeIcon icon={faBell} style={{color: "#e81111",}} />:""} */}
+            your wallet coins
+            {/* {!update?<FontAwesomeIcon icon={faBell} style={{color: "#e81111",}} />:""} */}
           </NavLink>
         </div>
       </div>
-     <div className='sell-container'><h3>Your Sell coins list :</h3>
-     {coinsToSell?.map((data, i) => {
-       
-      if(i>0)
-      return (
-        <tr key={i}
-          style={{ backgroundColor: "goldenrod" }}
-          className="wallet-item"
-        >
-                 <div class="img__wrapper">
-  <img src="http://www.savoy-sharm.com/media-room/images/hi-res/king-bed-room-accommodation-savoy-luxury-5-stars-accommodation-sharm-el-sheikh.jpg" alt="" />
-  <p class="sold_out">Sold out</p>
-</div>
-          <td>
-            <img
-              className="coin-img"
-              src={data.image}
-              alt={data.symbol}
-              style={{ width: 30, height: 30 }}
-            />{" "}
-          </td>
-          <td>{data.cryptos}</td>
-          <td>x{data.quantity}</td>
-        
-          <td>{data.current_price+(data.current_price* data.price_change_percentage_24h)}</td>
-          <td>
-            {/* {soldOut? */}
-            <button
-           
-              style={{ background: "red" }}
-            //  name={data.current_price+(data.current_price* data.price_change_percentage_24h)}
-            name={data._id}
-              className="btn"
-              onClick={(e,data)=>goToSell(e,data)
-              // removeItem(e,data)
-              }
-            >
-              sell{" "}
-            </button>
-          </td>
-        </tr>
-      );
-  })}</div>
-     
-    
+      <div className='sell-container'><h3>Pleas confirm our Sell  :</h3>
+        {coinsToSell?.map((data, i) => {
+
+          if (i >= 1)
+            return (
+              <tr key={i}
+                style={{ backgroundColor: "goldenrod" }}
+                className="wallet-item"
+              >
+
+                <td>
+                  <img
+                    className="coin-img"
+                    src={data.image}
+                    alt={data.symbol}
+                    style={{ width: 30, height: 30 }}
+                  />{" "}
+                </td>
+                <td>{data.cryptos}</td>
+                <td>x{data.quantity}</td>
+
+                <td>{data.current_price + (data.current_price * data.price_change_percentage_24h) + 1}</td>
+                <td>
+                  {/* {soldOut? */}
+                  <button
+
+                    style={{ background: "red" }}
+                    //  name={data.current_price+(data.current_price* data.price_change_percentage_24h)}
+                    name={data._id}
+                    className="btn"
+                    onClick={(e, data) => goToSell(e, data)
+                      // removeItem(e,data)
+                    }
+                  >
+                    Confirm
+                  </button>
+                </td>
+              </tr>
+            );
+        })}</div>
+
+
     </div>
   )
 }

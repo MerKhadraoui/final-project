@@ -46,7 +46,7 @@ function Reviews() {
   };
 
   const reversedReviews = [...reviews].reverse();
-console.log(reviews );
+  console.log(reviews);
   return (
     <>
       <h2 className="review-heading">Reviews</h2>
@@ -55,26 +55,26 @@ console.log(reviews );
           <p>No reviews available.</p>
         ) : (
           <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div id="testimonial-slider" class="owl-carousel">
-                {reversedReviews.map((review) => (
-                  <div class="testimonial">
-                    <div class="pic"> 
-                      <img src={review.avatar} alt="avatar" />
+            <div class="row">
+              <div class="col-md-12">
+                <div id="testimonial-slider" class="owl-carousel">
+                  {reversedReviews.map((review) => (
+                    <div class="testimonial">
+                      <div class="pic">
+                        <img src={review.avatar} alt="avatar" />
+                      </div>
+                      <p class="description">{review.text}</p>
+                      <h4 class="title">{review.firstName}</h4>
+                      <small class="post">{review.date}</small>
                     </div>
-                    <p class="description">{review.text}</p>
-                    <h4 class="title">{review.firstName}</h4>
-                    <small class="post">{review.date}</small>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
         )}
       </div>
-     
+
     </>
   );
 }

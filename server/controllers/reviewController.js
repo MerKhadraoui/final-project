@@ -3,7 +3,7 @@ import Review from "../models/reviewModel.js";
 export const createReview = async (req, res, next) => {
   try {
     const { text, avatar, firstName } = req.body; // Destructuring from req.body
-console.log(req.body);
+    console.log(req.body);
     if (!text || text.trim() === '') {
       return res.status(400).json({ message: "Review text is required and cannot be empty." });
     }
@@ -45,7 +45,6 @@ function formatDate(date) {
   const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
   return date.toLocaleDateString('en-US', options).replace(/\//g, '-');
 }
-
 
 
 

@@ -30,8 +30,8 @@ function MyProfileForme() {
 
   const navigate = useNavigate();
 
-console.log(userId); 
- const [isEditing, setIsEditing] = useState(false);
+  console.log(userId);
+  const [isEditing, setIsEditing] = useState(false);
   const [isAboutMeEditing, setIsAboutMeEditing] = useState(false);
   // const [editProfileData, setEditProfileData] = useState({ ...profileData });
   // const [editAboutMe, setEditAboutMe] = useState(profileData.aboutMe);
@@ -116,7 +116,7 @@ console.log(userId);
         email: res.data.email,
         phone: res.data.phone,
         aboutMe: res.data.aboutMe,
-        avatar: res.data.avatar 
+        avatar: res.data.avatar
         // ? res.data.avatar : avatar,
       });
     } catch (err) {
@@ -151,17 +151,17 @@ console.log(userId);
                 alt="Logo"
               />
             </div>
-            <div>
-            <h3>
-              {profileData.firstName} {profileData.lastName}
-            </h3>
+            <div className="data">
+              <h3>
+                {profileData.firstName} {profileData.lastName}
+              </h3>
 
-            <p>
-              <FontAwesomeIcon icon={faEnvelope} /> {profileData.email}
-            </p>
-            <p>
-              <FontAwesomeIcon icon={faPhone} /> {profileData.phone}
-            </p>
+              <p>
+                <FontAwesomeIcon icon={faEnvelope} /> {profileData.email}
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faPhone} /> {profileData.phone}
+              </p>
             </div>
           </div>
           {/* Profile Edit Form */}
@@ -169,80 +169,80 @@ console.log(userId);
             {isEditing ? (
               <>
                 <form className="profile-form" onSubmit={handleProfileFormSubmit}>
-                
-                    <label>
-                      First Name:
-                      <input
-                        type="text"
-                        name="firstName"
-                        className="form-control"
-                        value={profileData.firstName}
-                        onChange={(e) => {
-                          setProfileData({
-                            ...profileData,
-                            firstName: e.target.value,
-                          });
-                        }}
-                      />
-                    </label>
-                    <label>
-                      Last Name:
-                      <input
-                        type="text"
-                        name="lastName"
-                        className="form-control"
-                        value={profileData.lastName}
-                        onChange={(e) => {
-                          setProfileData({
-                            ...profileData,
-                            lastName: e.target.value,
-                          });
-                        }}
-                      />
-                    </label>
-                    <label>
-                      Phone:
-                      <input
-                        type="text"
-                        name="phone"
-                        className="form-control"
-                        value={profileData.phone}
-                        onChange={(e) => {
-                          setProfileData({
-                            ...profileData,
-                            phone: e.target.value,
-                          });
-                        }}
-                      />
-                    </label>
-                    <label>
-                      Email:
-                      <input
-                        type="email"
-                        name="email"
-                        className="form-control"
-                        value={profileData.email}
-                        onChange={(e) => {
-                          setProfileData({
-                            ...profileData,
-                            email: e.target.value,
-                          });
-                        }}
-                      />
-                    </label>
-              
-                
-                    <label>
-                      {" "}
-                      <input
-                        className="input-choose-image"
-                        type="file"
-                        name="image"
-                        accept="image/png, image/jpg, image/jpeg, image/gif"
-                        onChange={(e) => imageUploader(e.target.files[0])}
-                      />
-                    </label>
-                       <div className="buttons-profile">
+
+                  <label>
+                    First Name:
+                    <input
+                      type="text"
+                      name="firstName"
+                      className="form-control"
+                      value={profileData.firstName}
+                      onChange={(e) => {
+                        setProfileData({
+                          ...profileData,
+                          firstName: e.target.value,
+                        });
+                      }}
+                    />
+                  </label>
+                  <label>
+                    Last Name:
+                    <input
+                      type="text"
+                      name="lastName"
+                      className="form-control"
+                      value={profileData.lastName}
+                      onChange={(e) => {
+                        setProfileData({
+                          ...profileData,
+                          lastName: e.target.value,
+                        });
+                      }}
+                    />
+                  </label>
+                  <label>
+                    Phone:
+                    <input
+                      type="text"
+                      name="phone"
+                      className="form-control"
+                      value={profileData.phone}
+                      onChange={(e) => {
+                        setProfileData({
+                          ...profileData,
+                          phone: e.target.value,
+                        });
+                      }}
+                    />
+                  </label>
+                  <label>
+                    Email:
+                    <input
+                      type="email"
+                      name="email"
+                      className="form-control"
+                      value={profileData.email}
+                      onChange={(e) => {
+                        setProfileData({
+                          ...profileData,
+                          email: e.target.value,
+                        });
+                      }}
+                    />
+                  </label>
+
+
+                  <label>
+                    {" "}
+                    <input
+                      className="input-choose-image"
+                      type="file"
+                      name="image"
+                      accept="image/png, image/jpg, image/jpeg, image/gif"
+                      onChange={(e) => imageUploader(e.target.files[0])}
+                    />
+                  </label>
+                  <div className="buttons-profile">
                     <button className="btn-save btn-profile btn-save-changes" type="submit">
                       Save Changes
                     </button>
@@ -252,11 +252,11 @@ console.log(userId);
                     >
                       Close
                     </button>
-                 </div>
+                  </div>
                 </form>
               </>
             ) : (
-            
+
               <button className="icon-edit" onClick={handleProfileEditClick}>
                 <FontAwesomeIcon icon={faPen} />
               </button>
@@ -285,7 +285,7 @@ console.log(userId);
                   className="btn-close btn-notes"
                   onClick={handleAboutMeEditClick}
                 >
-                  Close 
+                  Close
                 </button>
               </div>
             </form>

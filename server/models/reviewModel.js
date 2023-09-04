@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
 const reviewSchema = new mongoose.Schema({
-  avatar:{
-    type:String,
+  avatar: {
+    type: String,
     required: true,
 
   },
-  firstName:{
-    type:String,
+  firstName: {
+    type: String,
     required: true,
 
 
@@ -20,10 +20,9 @@ const reviewSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
- 
+
 });
 
 const Review = mongoose.model("Review", reviewSchema);
 
 export default Review;
-

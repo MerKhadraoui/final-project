@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 
 function MyWallet() {
-  const navigate=useNavigate()
+  const navigate = useNavigate()
   let sum = [];
   const [msgResponse, setMsgResponse] = useState("");
   const [errMsg, setErrMsg] = useState("");
@@ -15,7 +15,7 @@ function MyWallet() {
   const [listUpdate, setListUpdate] = useState(true);
 
   const {
-    walletList, 
+    walletList,
     setWalletList,
     counter,
     setCounter,
@@ -36,24 +36,25 @@ function MyWallet() {
       })
       .then((res) => {
         setWalletList(res.data)
-console.log(walletList);      })
+        console.log(walletList);
+      })
       .catch((err) => console.log(err.message));
   };
-  selectedCrypt.map((data,i) =>{if(i>0) return sum.push(data.current_price)});
+  selectedCrypt.map((data, i) => { if (i > 0) return sum.push(data.current_price) });
   const total = sum.reduce((acc, cur) => acc + cur, 0);
-  const deleteCoin =  (e,data) => {
+  const deleteCoin = (e, data) => {
     if (counter > 1) {
       setCounter(counter - 1);
     } else {
       setCounter(1);
     }
     console.log(e.target.name);
-   const newSelectCr= selectedCrypt.filter((item)=>
-  item.id!==e.target.name
-    
-  )
-  setSelectedCrypt(newSelectCr);
-  console.log(selectedCrypt);
+    const newSelectCr = selectedCrypt.filter((item) =>
+      item.id !== e.target.name
+
+    )
+    setSelectedCrypt(newSelectCr);
+    console.log(selectedCrypt);
 
     // axios
     //   .delete(
@@ -66,12 +67,12 @@ console.log(walletList);      })
     //       },
     //     }
     //   )
-      // .then((res) => {
-      //   console.log(res.data);
-        setUpdate(true);
-        getcoins();
-      // })
-      // .catch((err) => console.log(err));
+    // .then((res) => {
+    //   console.log(res.data);
+    setUpdate(true);
+    getcoins();
+    // })
+    // .catch((err) => console.log(err));
   };
   useEffect(() => {
     getcoins();
@@ -99,8 +100,8 @@ console.log(walletList);      })
 
   const buyCryptos = async () => {
     console.log(bankData);
-    const bankID = bankData[0]._id;
-    console.log(bankData[0]._id);
+    const bankID = bankData._id;
+    console.log(bankData._id);
     try {
       const balancData = { total, bankID };
       const response = await axios.put(
@@ -130,14 +131,14 @@ console.log(walletList);      })
     <div className="wallet-container">
       <div className="sidebar">
         <div className="link-list">
-          <NavLink  style={{textDecoration: 'none'}} to="/bank-data" className="link-name">
+          <NavLink style={{ textDecoration: 'none' }} to="/bank-data" className="link-name">
             Your Bank
           </NavLink>
-          <NavLink  style={{textDecoration: 'none'}}to="/sell-coins" className="link-name">
+          <NavLink style={{ textDecoration: 'none' }} to="/sell-coins" className="link-name">
             Coins to sell{" "}
-            
+
           </NavLink>
-          <NavLink  style={{textDecoration: 'none'}}to="/coins" className="link-name">
+          <NavLink style={{ textDecoration: 'none' }} to="/coins" className="link-name">
             your wallet coins{" "}
             {!update ? (
               <FontAwesomeIcon icon={faBell} style={{ color: "#e81111" }} />
@@ -173,7 +174,7 @@ console.log(walletList);      })
                     style={{ background: "red" }}
                     name={data.id}
                     className="btn"
-                    onClick={(e)=>deleteCoin(e,data)}
+                    onClick={(e) => deleteCoin(e, data)}
                   >
                     Remove{" "}
                   </button>

@@ -17,7 +17,7 @@ import MyProfileForme from "./MyProfileForme";
 
 
 function Profile() {
-  const {logoutHandler} = useContext(StorContext);
+  const { logoutHandler } = useContext(StorContext);
 
   return (
     <main className="main">
@@ -38,22 +38,22 @@ function Profile() {
       <div className="">
         <div className="card-content">
           <div className="card-heading">
-           <div className="card-heading-links">
-           <div><Link to="/my-wallet"style={{textDecoration: 'none'}} className="link-name">
+            <div className="card-heading-links">
+              <div><Link to="/my-wallet" style={{ textDecoration: 'none' }} className="link-name">
                 My Wallet
               </Link></div>
-              <div> <Link to="/trading-live" style={{textDecoration: 'none'}}className="link-name">
+              <div> <Link to="/trading-live" style={{ textDecoration: 'none' }} className="link-name">
                 My live Trading
               </Link></div>
-             <div><Link to="/" style={{textDecoration: 'none'}}className=" link-name profile-logout" onClick={logoutHandler} >
-              <i className="fas fa-times-circle"></i> 
+              <div><Link to="/" style={{ textDecoration: 'none' }} className=" link-name profile-logout" onClick={logoutHandler} >
+                <i className="fas fa-times-circle"></i>
               </Link></div>
-              
-            
+
+
             </div>
           </div>
-         <div className="">  <MyProfileForme /></div>
-        
+          <div className="">  <MyProfileForme /></div>
+
         </div>
       </div>
     </main>

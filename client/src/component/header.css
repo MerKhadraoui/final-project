@@ -20,12 +20,12 @@
     width: 10px;
     height: 10px;
 }
-.container{
+/* .container{
 
-    /* height:50%; */
-    /* margin-left: 5%;
-    margin-right: 5%;  */
- }
+    height:50%;
+    margin-left: 5%;
+    margin-right: 5%; 
+ } */
  .profile-pic{
     width: 50px;
     height: 50px;
@@ -42,8 +42,8 @@
 /* Navbar section */
 
 .nav{
-    width: 100vw;
-    padding-top: 0.5rem;
+    width: 99.9vw;
+    padding-top: 1rem;
     height: 10vh;
     position: relative;
     /* line-height: 65px; */
@@ -72,7 +72,7 @@
 
 .nav div.main_list{
     width: 80%;
-    /* height: 65px; */
+    height: 65px;
     float: right;
 }
 
@@ -84,8 +84,8 @@
 }
 
 .nav div.main_list ul li{
-    width: 300px;
-    /* height: 65px; */
+    width:200px;
+    height: 65px;
 
 }
 .link{
@@ -179,7 +179,7 @@
 /* Medai qurey section */
 
 
-
+/* 
 @media screen and (max-width:768px) {
    
     .container{
@@ -193,9 +193,8 @@
   
     .nav div.main_list{
         width: 100%;
-        height: 2rem;
+        height: 1rem;
         margin-top: 65px;
-        height: 0px;
         overflow:inherit;
         font-size: small;   
      
@@ -203,7 +202,7 @@
     
     .nav .container .show_list{
         height: 200px;
-        /* width: 100vw; */
+        width: 100vw;
         position: fixed;
         left: 0;
         
@@ -238,4 +237,58 @@ margin-top:10px;
    
 
     }
+    */
+
+    @media screen and (min-width: 400px) and (max-width: 1024px) {
+      
+  
+    .nav{
+        width: 100%;
+    }
+    .nav div.logo{
+        position: fixed;
+        left: 0;    }
+  
+    .nav div.main_list{
+        width: 100%;
+        height: 1rem;
+        margin-top: 65px;
+        overflow:inherit;
+        font-size: small;   
+    }
+    
+    .nav .container .show_list{
+        height: 200px;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        
+    }
+    
+ 
+    .nav div.main_list ul li{
+
+margin-top:10px;
+
+}
+
+    
+    .nav div.main_list ul li a{
+      text-align: center;
+        line-height: 20px;
+        width: 100%;
+      font-size: medium;
+        display: table;
+        color: rgb(216, 211, 199);
+         /* padding-right: 1rem; */
    
+    }
+        .nav div.main_list ul li a:hover{
+          color: white;
+    }
+    
+    .nav div.media_button{
+        display: block;
+    }
+        
+    }

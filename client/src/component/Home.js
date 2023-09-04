@@ -11,11 +11,11 @@ import axios from "axios";
 import Reviews from "./Reviews";
 
 function Home() {
-  const { userName, reviewText, avatar, setReviewText } =
+  const { userName, reviewText, avatar, setReviewText, authenticated } =
     useContext(StorContext);
 
   const newsData = myStore((state) =>
-    state.newsData.articles ? state.newsData.articles : []
+    state.newsData.results ? state.newsData.results : []
   );
   const handleReviewSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +27,8 @@ function Home() {
       );
       if (response.status === 201) {
         console.log("Review submitted successfully");
-        setReviewText("");
+        e.target.reset();
+
       } else {
         console.error("Error submitting review");
       }
@@ -54,13 +55,14 @@ function Home() {
                 {" "}
                 <img
                   className="d-block w-30 image"
-                  src={`${data.urlToImage}`}
+                  src={`${data.image_url}`}
                   alt="news"
                 />
               </a>
               <Carousel.Caption>
                 <div className="news-box">
-                  <a className="link" href={`${data.url}`}>
+                  <a className="link" target="_blank" href={`${data.article_url
+                    }`}>
                     {" "}
                     <h3> Title : {data.title}</h3>
                   </a>
@@ -77,22 +79,20 @@ function Home() {
           ))}
         </Carousel>
       </div>
-      {/* <div>
-  <CryptosCart /></div> */}
       <div>
         (<CryptosList />)
       </div>
 
       <div>
         {" "}
-        <PhonApp />
+        {/* <PhonApp /> */}
       </div>
       <section className="review-read-write">
         <div className="review-read">
           <Reviews />
         </div>
 
-        <div className="review-write">
+        {authenticated ? <div className="review-write">
           <form className="review-form" onSubmit={handleReviewSubmit}>
             <label className="review-label" htmlFor="reviewText">
               Write a Review:
@@ -113,7 +113,7 @@ function Home() {
               Submit
             </button>
           </form>
-        </div>
+        </div> : ""}
       </section>
     </div>
   );
